@@ -1,0 +1,35 @@
+.pentagon {
+  position: relative;
+  width: 157.5px;
+  height: 150px;
+  background: #4169e1;
+  clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+  transform: translateZ(102px);
+}
+.side {
+  background-color: #4169e1;
+  transform-style: preserve-3d;
+  @apply absolute h-[200px] w-24 active;
+}
+.active {
+  @apply z-[1000] border;
+}
+.zero {
+  transform: translateX(31px) translateY(-100px) rotateZ(180deg) rotateX(90deg);
+}
+.one {
+  transform: translateX(94px) translateY(-145px) rotate(108deg) rotateX(90deg);
+}
+.two {
+  transform: translateY(-221px) translateX(70px) rotate(36deg) rotateX(90deg);
+}
+.three {
+  transform: translateX(-8px) translateY(-219px) rotate(-36deg) rotateX(90deg);
+}
+.four {
+  transform: translateX(-31px) translateY(-142px) rotate(72deg) rotateX(90deg);
+}
+.dice-con {
+  transform-style: preserve-3d;
+  transform: rotateX(160deg) rotateY(100deg);
+}
