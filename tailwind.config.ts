@@ -1,7 +1,9 @@
 export const tailwindConfig = {
   theme: {
-    colors: {
-      xxx: "white"
+    extend: {
+      colors: {
+        xxx: "white"
+      }
     }
   }
 };

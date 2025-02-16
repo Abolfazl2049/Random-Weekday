@@ -1,35 +1,90 @@
-.pentagon {
-  position: relative;
-  width: 157.5px;
-  height: 150px;
-  background: #4169e1;
-  clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
-  transform: translateZ(102px);
+.ax-center {
+  @apply left-1/2 -translate-x-1/2;
 }
-.side {
-  background-color: #4169e1;
-  transform-style: preserve-3d;
-  @apply absolute h-[200px] w-24 active;
+.ay-center {
+  @apply top-1/2 -translate-y-1/2;
 }
-.active {
-  @apply z-[1000] border;
+.a-center {
+  @apply ax-center ay-center;
 }
-.zero {
-  transform: translateX(31px) translateY(-100px) rotateZ(180deg) rotateX(90deg);
-}
-.one {
-  transform: translateX(94px) translateY(-145px) rotate(108deg) rotateX(90deg);
-}
-.two {
-  transform: translateY(-221px) translateX(70px) rotate(36deg) rotateX(90deg);
-}
-.three {
-  transform: translateX(-8px) translateY(-219px) rotate(-36deg) rotateX(90deg);
-}
-.four {
-  transform: translateX(-31px) translateY(-142px) rotate(72deg) rotateX(90deg);
-}
+
+/* dice parts base */
+
 .dice-con {
   transform-style: preserve-3d;
-  transform: rotateX(160deg) rotateY(100deg);
+  transform: rotateX(0deg) rotateY(180deg) rotate(35deg);
+}
+.pentagon {
+  position: absolute;
+  width: 127.5px;
+  height: 120px;
+  clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+  @apply bg-sky-100;
+}
+.side {
+  transform-style: preserve-3d;
+  width: 79px;
+  height: 100px;
+  position: absolute;
+  @apply active bg-slate-950;
+}
+.active {
+  @apply z-[1000] border border-sky-100;
+}
+
+/* sides */
+
+.side.one {
+  transform: translateX(25px) translateY(-113px) rotateZ(180deg) rotateX(90deg);
+}
+.side.two {
+  transform: translateX(76px) translateY(-150px) rotate(108deg) rotateX(90deg);
+}
+.side.three {
+  transform: translateY(-210px) translateX(56px) rotate(36deg) rotateX(90deg);
+}
+.side.four {
+  transform: translateX(-8px) translateY(-209px) rotate(-36deg) rotateX(90deg);
+}
+.side.five {
+  transform: translateX(-27px) translateY(-149px) rotate(72deg) rotateX(90deg);
+}
+.six {
+  @apply pentagon;
+  transform: translateZ(49px) translateY(-183px);
+}
+.seven {
+  @apply pentagon z-[10000];
+  transform: translateZ(-50px) translateY(-183px);
+}
+
+/* dot base */
+.dot-parent {
+  @apply inline-block size-full relative;
+}
+.dot {
+  @apply absolute size-5 bg-black rounded-full bg-pink-950 border border-slate-900;
+}
+
+/* dot 7 */
+.seven .dot-parent *:nth-child(1) {
+  @apply left-[30px] top-[24px];
+}
+.seven .dot-parent *:nth-child(2) {
+  @apply left-[26px] top-[60px];
+}
+.seven .dot-parent *:nth-child(3) {
+  @apply left-[49px] top-[45px];
+}
+.seven .dot-parent *:nth-child(4) {
+  @apply right-[42px] top-[55px];
+}
+.seven .dot-parent *:nth-child(5) {
+  @apply right-[25px] top-[88px];
+}
+.seven .dot-parent *:nth-child(6) {
+  @apply ax-center top-[88px];
+}
+.seven .dot-parent *:nth-child(7) {
+  @apply left-[24px] top-[88px];
 }
