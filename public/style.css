@@ -1,19 +1,24 @@
-.ax-center {
-  @apply left-1/2 -translate-x-1/2;
+@font-face {
+  font-family: Monomakh;
+  src: url("./Monomakh-Regular.ttf"), format(truetype);
 }
-.ay-center {
-  @apply top-1/2 -translate-y-1/2;
+body {
+  font-family: Monomakh;
 }
-.a-center {
-  @apply ax-center ay-center;
+.flex-center {
+  @apply flex items-center justify-center;
 }
-
 /* dice parts base */
 
 .dice-con {
   transform-style: preserve-3d;
-  transform: rotateX(0deg) rotateY(180deg) rotate(35deg);
+  transform: rotateX(0deg) rotateY(00deg) rotate(0deg);
 }
+
+.dice-con > * {
+  @apply flex-center;
+}
+
 .pentagon {
   position: absolute;
   width: 127.5px;
@@ -56,35 +61,4 @@
 .seven {
   @apply pentagon z-[10000];
   transform: translateZ(-50px) translateY(-183px);
-}
-
-/* dot base */
-.dot-parent {
-  @apply inline-block size-full relative;
-}
-.dot {
-  @apply absolute size-5 bg-black rounded-full bg-pink-950 border border-slate-900;
-}
-
-/* dot 7 */
-.seven .dot-parent *:nth-child(1) {
-  @apply left-[30px] top-[24px];
-}
-.seven .dot-parent *:nth-child(2) {
-  @apply left-[26px] top-[60px];
-}
-.seven .dot-parent *:nth-child(3) {
-  @apply left-[49px] top-[45px];
-}
-.seven .dot-parent *:nth-child(4) {
-  @apply right-[42px] top-[55px];
-}
-.seven .dot-parent *:nth-child(5) {
-  @apply right-[25px] top-[88px];
-}
-.seven .dot-parent *:nth-child(6) {
-  @apply ax-center top-[88px];
-}
-.seven .dot-parent *:nth-child(7) {
-  @apply left-[24px] top-[88px];
 }
