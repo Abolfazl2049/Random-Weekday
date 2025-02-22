@@ -1,0 +1,17 @@
+.dice-con {
+  animation: turn-around 20000ms ease-in-out infinite forwards;
+}
+@keyframes turn-around {
+  25% {
+    transform: rotateX(0deg) rotateY(0deg) rotate(20deg);
+  }
+  50% {
+    transform: rotateX(60deg) rotateY(600deg) rotate(40deg);
+  }
+  75% {
+    transform: rotateX(120deg) rotateY(120deg) rotate(0deg);
+  }
+  100% {
+    transform: rotateX(3600deg) rotateY(3600deg) rotate(120deg) translateY(250px) translateX(-150px);
+  }
+}
