@@ -9,9 +9,9 @@
     transform: rotateX(60deg) rotateY(600deg) rotate(40deg);
   }
   75% {
-    transform: rotateX(120deg) rotateY(120deg) rotate(0deg);
+    transform: rotateX(120deg) rotateY(820deg) rotate(80deg);
   }
   100% {
-    transform: rotateX(3600deg) rotateY(3600deg) rotate(120deg) translateY(250px) translateX(-150px);
+    transform: rotateX(3600deg) rotateY(3600deg) rotate(150deg) translateY(250px) translateX(-150px);
   }
 }

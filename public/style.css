@@ -8,6 +8,9 @@ body {
 .flex-center {
   @apply flex items-center justify-center;
 }
+.a-center {
+  @apply absolute left-1/2 -translate-x-1/2;
+}
 /* dice parts base */
 
 .dice-con {
