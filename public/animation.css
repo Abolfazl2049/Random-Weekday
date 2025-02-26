@@ -1,17 +1,76 @@
-.dice-con {
-  animation: turn-around 20000ms ease-in-out infinite forwards;
+.base-animation {
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 0s, 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
-@keyframes turn-around {
-  25% {
-    transform: rotateX(0deg) rotateY(0deg) rotate(20deg);
+.to-side-1 {
+  animation: turn, to-side-1;
+  @apply base-animation;
+}
+.to-side-2 {
+  animation: turn, to-side-2;
+  @apply base-animation;
+}
+.to-side-3 {
+  animation: turn, to-side-3;
+  @apply base-animation;
+}
+.to-side-4 {
+  animation: turn, to-side-4;
+  @apply base-animation;
+}
+.to-side-5 {
+  animation: turn, to-side-5;
+  @apply base-animation;
+}
+.to-side-6 {
+  animation: turn, to-side-6;
+  @apply base-animation;
+}
+.to-side-7 {
+  animation: turn, to-side-7;
+  @apply base-animation;
+}
+
+@keyframes turn {
+  to {
+    transform: translateY(400px) rotateY(1200deg) rotateX(20deg);
   }
-  50% {
-    transform: rotateX(60deg) rotateY(600deg) rotate(40deg);
+}
+@keyframes to-side-1 {
+  to {
+    transform: translateY(300px) rotateY(-180deg) rotateX(-90deg);
   }
-  75% {
-    transform: rotateX(120deg) rotateY(820deg) rotate(80deg);
+}
+@keyframes to-side-2 {
+  to {
+    transform: translateY(300px) rotateY(-110deg) rotateX(-90deg);
   }
-  100% {
-    transform: rotateX(3600deg) rotateY(3600deg) rotate(150deg) translateY(250px) translateX(-150px);
+}
+@keyframes to-side-3 {
+  to {
+    transform: translateY(300px) rotateY(-35deg) rotateX(-90deg);
+  }
+}
+@keyframes to-side-4 {
+  to {
+    transform: translateY(300px) rotateY(40deg) rotateX(-90deg);
+  }
+}
+@keyframes to-side-5 {
+  to {
+    transform: translateY(300px) rotateY(110deg) rotateX(-90deg);
+  }
+}
+@keyframes to-side-6 {
+  to {
+    transform: translateY(300px) rotateY(0deg);
+  }
+}
+@keyframes to-side-7 {
+  to {
+    transform: translateY(300px) rotateY(180deg);
   }
 }
