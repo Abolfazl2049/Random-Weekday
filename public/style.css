@@ -5,67 +5,7 @@
 body {
   font-family: Monomakh;
 }
-.flex-center {
-  @apply flex items-center justify-center;
-}
-.a-center {
-  @apply absolute left-1/2 -translate-x-1/2;
-}
-/* dice parts base */
 
-.dice-con {
-  transform-style: preserve-3d;
-}
-
-.dice-con > * {
-  @apply flex-center;
-}
-
-.pentagon {
-  position: absolute;
-  width: 127.5px;
-  height: 120px;
-  clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
-  @apply bg-sky-100;
-}
-.side {
-  transform-style: preserve-3d;
-  width: 79px;
-  height: 100px;
-  position: absolute;
-  @apply active bg-slate-950;
-}
-.active {
-  @apply z-[1000] border border-sky-100;
-}
-
-/* sides */
-
-.side.one {
-  transform: translateX(25px) translateY(72px) rotateZ(180deg) rotateX(90deg);
-}
-.side.two {
-  transform: translateX(76px) translateY(34px) rotate(108deg) rotateX(90deg);
-}
-.side.three {
-  transform: translateX(56px) translateY(-26px) rotate(36deg) rotateX(90deg);
-}
-.side.four {
-  transform: translateX(-8px) translateY(-26px) rotate(-36deg) rotateX(90deg);
-}
-.side.five {
-  transform: translateX(-27px) translateY(35px) rotate(72deg) rotateX(90deg);
-}
-.six {
-  @apply pentagon;
-  top: calc(50% - 60px);
-  left: calc(50% - 63.5px);
-  transform: translateZ(49px);
-}
-.seven {
-  @apply pentagon z-[10000];
-  transform: translateZ(-50px);
-}
 .floor {
   background: rgb(224, 242, 254);
   background: radial-gradient(circle, rgba(224, 242, 254, 1) 0%, rgba(2, 6, 23, 1) 100%);

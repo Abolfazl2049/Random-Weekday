@@ -18,13 +18,13 @@ let animate = (side: number) => {
 defineExpose({animate});
 </script>
 <template>
-  <div ref="diceEl" class="dice-con relative transition-all size-32 border border-red-600">
-    <div class="side one"><SideNumber> 1 </SideNumber></div>
-    <div class="side two"><SideNumber> 2 </SideNumber></div>
-    <div class="side three"><SideNumber> 3 </SideNumber></div>
-    <div class="side four"><SideNumber> 4 </SideNumber></div>
-    <div class="side five"><SideNumber class="translate-y-1"> 5 </SideNumber></div>
-    <div class="six"><SideNumber class="!text-black translate-y-2"> 6 </SideNumber></div>
-    <div class="seven"><SideNumber class="translate-y-[10px] !text-black"> 7 </SideNumber></div>
+  <div ref="diceEl" class="dice-con relative transition-all size-32">
+    <div class="rectangle one"><SideNumber> 1 </SideNumber></div>
+    <div class="rectangle two"><SideNumber> 2 </SideNumber></div>
+    <div class="rectangle three"><SideNumber> 3 </SideNumber></div>
+    <div class="rectangle four"><SideNumber> 4 </SideNumber></div>
+    <div class="rectangle five"><SideNumber class="translate-y-1"> 5 </SideNumber></div>
+    <div class="six pentagon"><SideNumber class="!text-black translate-y-2"> 6 </SideNumber></div>
+    <div class="seven pentagon"><SideNumber class="translate-y-[10px] !text-black"> 7 </SideNumber></div>
   </div>
 </template>

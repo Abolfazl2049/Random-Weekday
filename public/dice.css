@@ -1,0 +1,54 @@
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+/* dice parts base */
+
+.dice-con {
+  transform-style: preserve-3d;
+}
+
+.dice-con > * {
+  @apply flex-center;
+}
+
+.pentagon {
+  position: absolute;
+  width: 127.5px;
+  height: 120px;
+  clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+  @apply bg-sky-100;
+}
+.rectangle {
+  transform-style: preserve-3d;
+  width: 79px;
+  height: 100px;
+  position: absolute;
+  @apply bg-slate-950   border border-sky-100;
+}
+
+/* sides */
+
+.rectangle.one {
+  transform: translateX(25px) translateY(72px) rotateZ(180deg) rotateX(90deg);
+}
+.rectangle.two {
+  transform: translateX(76px) translateY(34px) rotate(108deg) rotateX(90deg);
+}
+.rectangle.three {
+  transform: translateX(56px) translateY(-26px) rotate(36deg) rotateX(90deg);
+}
+.rectangle.four {
+  transform: translateX(-8px) translateY(-26px) rotate(-36deg) rotateX(90deg);
+}
+.rectangle.five {
+  transform: translateX(-27px) translateY(35px) rotate(72deg) rotateX(90deg);
+}
+.pentagon.six {
+  top: calc(50% - 60px);
+  left: calc(50% - 63.5px);
+  transform: translateZ(49px);
+}
+.pentagon.seven {
+  transform: translateZ(-50px);
+}
