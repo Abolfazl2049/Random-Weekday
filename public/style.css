@@ -42,27 +42,29 @@ body {
 /* sides */
 
 .side.one {
-  transform: translateX(25px) translateY(-113px) rotateZ(180deg) rotateX(90deg);
+  transform: translateX(25px) translateY(72px) rotateZ(180deg) rotateX(90deg);
 }
 .side.two {
-  transform: translateX(76px) translateY(-150px) rotate(108deg) rotateX(90deg);
+  transform: translateX(76px) translateY(34px) rotate(108deg) rotateX(90deg);
 }
 .side.three {
-  transform: translateY(-210px) translateX(56px) rotate(36deg) rotateX(90deg);
+  transform: translateX(56px) translateY(-26px) rotate(36deg) rotateX(90deg);
 }
 .side.four {
-  transform: translateX(-8px) translateY(-209px) rotate(-36deg) rotateX(90deg);
+  transform: translateX(-8px) translateY(-26px) rotate(-36deg) rotateX(90deg);
 }
 .side.five {
-  transform: translateX(-27px) translateY(-149px) rotate(72deg) rotateX(90deg);
+  transform: translateX(-27px) translateY(35px) rotate(72deg) rotateX(90deg);
 }
 .six {
   @apply pentagon;
-  transform: translateZ(49px) translateY(-183px);
+  top: calc(50% - 60px);
+  left: calc(50% - 63.5px);
+  transform: translateZ(49px);
 }
 .seven {
   @apply pentagon z-[10000];
-  transform: translateZ(-50px) translateY(-183px);
+  transform: translateZ(-50px);
 }
 .floor {
   background: rgb(224, 242, 254);
