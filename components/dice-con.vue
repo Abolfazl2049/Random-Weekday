@@ -3,14 +3,30 @@ let diceEl = ref<HTMLDivElement>();
 let animatedTo = ref();
 let animate = (side: number) => {
   if (diceEl.value) {
-    if (animatedTo.value !== undefined) diceEl.value.classList.remove(`to-side-${animatedTo.value}`);
+    if (animatedTo.value !== undefined) {
+      diceEl.value.classList.remove(`to-side-${animatedTo.value}`);
+      applyAnimation(`back-to-top`);
+    }
     animatedTo.value = side;
 
+    applyAnimation(`to-side-${side}`);
+  }
+};
+let applyAnimation = (animationName: string) => {
+  if (diceEl.value) {
     diceEl.value.style.animation = "none";
+
     setTimeout(() => {
       if (diceEl.value) {
         diceEl.value.style.animation = "";
-        diceEl.value.classList.add(`to-side-${side}`);
+        diceEl.value.classList.add(animationName);
+        diceEl.value.addEventListener(
+          "animationend",
+          e => {
+            console.log(e);
+          },
+          {once: true}
+        );
       }
     }, 10);
   }
