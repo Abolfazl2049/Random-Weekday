@@ -1,13 +1,11 @@
 <script setup lang="ts">
-let diceCount = ref(2);
+let diceCount = ref(7);
 let dice = ref();
 let rollDice = () => {
-  let day = new Date().getDay();
-  day = 0;
-  for (let i = 0; i < diceCount.value; i++) {
-    let side = Math.round(Math.random() * (6 - day) + day);
-    dice.value[i].animate(side + 1);
-  }
+  let today = new Date().getDay();
+  today = today === 6 ? 0 : today + 1;
+
+  for (let i = 0; i < diceCount.value; i++) dice.value[i].animate(Math.floor(Math.random() * (6 - today + 1) + today));
 };
 </script>
 <template>

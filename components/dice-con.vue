@@ -2,6 +2,7 @@
 let diceEl = ref<HTMLDivElement>();
 let animatedTo = ref();
 let animate = async (side: number) => {
+  console.log(side);
   if (diceEl.value) {
     if (animatedTo.value !== undefined) {
       diceEl.value.classList.remove(`to-side-${animatedTo.value}`);
@@ -29,12 +30,12 @@ defineExpose({animate});
 </script>
 <template>
   <div ref="diceEl" class="dice-con relative transition-all size-32">
+    <div class="rectangle zero"><SideNumber> 0 </SideNumber></div>
     <div class="rectangle one"><SideNumber> 1 </SideNumber></div>
     <div class="rectangle two"><SideNumber> 2 </SideNumber></div>
     <div class="rectangle three"><SideNumber> 3 </SideNumber></div>
-    <div class="rectangle four"><SideNumber> 4 </SideNumber></div>
-    <div class="rectangle five"><SideNumber class="translate-y-1 -scale-x-100"> 5 </SideNumber></div>
-    <div class="six pentagon"><SideNumber class="!text-black translate-y-2"> 6 </SideNumber></div>
-    <div class="seven pentagon"><SideNumber class="translate-y-[10px] !text-black -scale-x-100"> 7 </SideNumber></div>
+    <div class="rectangle four"><SideNumber class="translate-y-1 -scale-x-100"> 4 </SideNumber></div>
+    <div class="five pentagon"><SideNumber class="!text-black translate-y-2"> 5 </SideNumber></div>
+    <div class="six pentagon"><SideNumber class="translate-y-[10px] !text-black -scale-x-100"> 6 </SideNumber></div>
   </div>
 </template>

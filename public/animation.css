@@ -3,10 +3,14 @@
 }
 .base-animation {
   animation-iteration-count: 1;
-  animation-duration: 10s;
+  animation-duration: 1s;
   animation-delay: 0s, 1s;
   animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   animation-fill-mode: forwards;
+}
+.to-side-0 {
+  animation: toss, to-side-0;
+  @apply base-animation;
 }
 .to-side-1 {
   animation: toss, to-side-1;
@@ -30,10 +34,6 @@
 }
 .to-side-6 {
   animation: toss, to-side-6;
-  @apply base-animation;
-}
-.to-side-7 {
-  animation: toss, to-side-7;
   @apply base-animation;
 }
 .back-to-top {
@@ -97,37 +97,37 @@
     transform: translateX(-250px) translateY(450px);
   }
 }
-@keyframes to-side-1 {
+@keyframes to-side-0 {
   to {
     transform: var(--translate) rotateY(-180deg) rotateX(-90deg);
   }
 }
-@keyframes to-side-2 {
+@keyframes to-side-1 {
   to {
     transform: var(--translate) rotateY(-110deg) rotateX(-90deg);
   }
 }
-@keyframes to-side-3 {
+@keyframes to-side-2 {
   to {
     transform: var(--translate) rotateY(-35deg) rotateX(-90deg);
   }
 }
-@keyframes to-side-4 {
+@keyframes to-side-3 {
   to {
     transform: var(--translate) rotateY(40deg) rotateX(-90deg);
   }
 }
-@keyframes to-side-5 {
+@keyframes to-side-4 {
   to {
     transform: var(--translate) rotateY(110deg) rotateX(-90deg);
   }
 }
-@keyframes to-side-6 {
+@keyframes to-side-5 {
   to {
     transform: var(--translate) rotateY(0deg);
   }
 }
-@keyframes to-side-7 {
+@keyframes to-side-6 {
   to {
     transform: var(--translate) rotateY(180deg);
   }
