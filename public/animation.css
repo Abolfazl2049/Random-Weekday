@@ -1,39 +1,39 @@
 :root {
-  --translate-y: 350px;
+  --translate: translateX(-250px) translateY(450px);
 }
 .base-animation {
   animation-iteration-count: 1;
-  animation-duration: 1s;
+  animation-duration: 10s;
   animation-delay: 0s, 1s;
   animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   animation-fill-mode: forwards;
 }
 .to-side-1 {
-  animation: turn, to-side-1;
+  animation: toss, to-side-1;
   @apply base-animation;
 }
 .to-side-2 {
-  animation: turn, to-side-2;
+  animation: toss, to-side-2;
   @apply base-animation;
 }
 .to-side-3 {
-  animation: turn, to-side-3;
+  animation: toss, to-side-3;
   @apply base-animation;
 }
 .to-side-4 {
-  animation: turn, to-side-4;
+  animation: toss, to-side-4;
   @apply base-animation;
 }
 .to-side-5 {
-  animation: turn, to-side-5;
+  animation: toss, to-side-5;
   @apply base-animation;
 }
 .to-side-6 {
-  animation: turn, to-side-6;
+  animation: toss, to-side-6;
   @apply base-animation;
 }
 .to-side-7 {
-  animation: turn, to-side-7;
+  animation: toss, to-side-7;
   @apply base-animation;
 }
 .back-to-top {
@@ -41,49 +41,100 @@
   @apply base-animation;
 }
 
-@keyframes turn {
-  to {
-    transform: translateY(var(--translate-y)) rotateY(1200deg) rotateX(20deg);
+@keyframes toss {
+  /* turning around in air */
+  5% {
+    transform: translateX(40px);
+  }
+  10% {
+    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
+  }
+  15% {
+    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
+  }
+  20% {
+    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
+  }
+  25% {
+    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
+  }
+  30% {
+    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
+  }
+  35% {
+    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
+  }
+  40% {
+    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
+  }
+  45% {
+    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
+  }
+  50% {
+    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
+  }
+  /* falling to the floor */
+  55% {
+    transform: translateX(-250px) translateY(-200px) rotateX(-120deg) rotateY(-120deg);
+  }
+  65% {
+    transform: translateX(-250px) translateY(450px) rotateX(120deg) rotateY(120deg);
+  }
+  /* floor fall effect */
+  70% {
+    transform: translateX(-250px) translateY(350px) rotateX(360deg) rotateY(360deg);
+  }
+  75% {
+    transform: translateX(-250px) translateY(450px) rotateX(600deg) rotateY(600deg);
+  }
+  80% {
+    transform: translateX(-250px) translateY(400px) rotateX(840deg) rotateY(840deg);
+  }
+  85% {
+    transform: translateX(-250px) translateY(450px) rotateX(400deg) rotateY(400deg);
+  }
+  100% {
+    transform: translateX(-250px) translateY(450px);
   }
 }
 @keyframes to-side-1 {
   to {
-    transform: translateY(var(--translate-y)) rotateY(-180deg) rotateX(-90deg);
+    transform: var(--translate) rotateY(-180deg) rotateX(-90deg);
   }
 }
 @keyframes to-side-2 {
   to {
-    transform: translateY(var(--translate-y)) rotateY(-110deg) rotateX(-90deg);
+    transform: var(--translate) rotateY(-110deg) rotateX(-90deg);
   }
 }
 @keyframes to-side-3 {
   to {
-    transform: translateY(var(--translate-y)) rotateY(-35deg) rotateX(-90deg);
+    transform: var(--translate) rotateY(-35deg) rotateX(-90deg);
   }
 }
 @keyframes to-side-4 {
   to {
-    transform: translateY(var(--translate-y)) rotateY(40deg) rotateX(-90deg);
+    transform: var(--translate) rotateY(40deg) rotateX(-90deg);
   }
 }
 @keyframes to-side-5 {
   to {
-    transform: translateY(var(--translate-y)) rotateY(110deg) rotateX(-90deg);
+    transform: var(--translate) rotateY(110deg) rotateX(-90deg);
   }
 }
 @keyframes to-side-6 {
   to {
-    transform: translateY(var(--translate-y)) rotateY(0deg);
+    transform: var(--translate) rotateY(0deg);
   }
 }
 @keyframes to-side-7 {
   to {
-    transform: translateY(var(--translate-y)) rotateY(180deg);
+    transform: var(--translate) rotateY(180deg);
   }
 }
 @keyframes back-to-top {
   from {
-    transform: translateY(var(--translate-y)) rotateY(180deg);
+    transform: var(--translate) rotateY(180deg);
   }
   to {
     transform: translateY(0deg) rotateY(0deg);
