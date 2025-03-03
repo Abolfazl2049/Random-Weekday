@@ -1,5 +1,5 @@
 <script setup lang="ts">
-let diceCount = ref(7);
+let diceCount = ref(3);
 let dice = ref();
 let rollDice = () => {
   let today = new Date().getDay();
