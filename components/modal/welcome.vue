@@ -44,7 +44,9 @@ onMounted(() => {
   <div @mousedown="initDragRotate" @mousemove="dragRotate" @mouseup="endDragRotate">
     <ModalBase v-model="show" class="!bg-black/70 !size-[80%] flex flex-col items-center justify-between !p-6">
       <p class="text-xl text-center select-none !text-white z-20">Touch to rotate the Dice</p>
-      <DiceCon id="test-dice" no-number />
+      <div class="scale-[2.5]">
+        <DiceCon id="test-dice" class="" />
+      </div>
       <button class="bg-rose-600 p-3 text-white rounded-lg select-none" @click="show = false">Begin Rolling</button>
     </ModalBase>
   </div>
