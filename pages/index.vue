@@ -25,6 +25,7 @@ let rollDice = () => {
         <button @click="rollDice" class="bg-rose-700 p-4 rounded-lg">Roll Dice</button>
       </div>
     </div>
-    <InfoModel />
+    <ModelInfo />
+    <ModalWelcome />
   </div>
 </template>
