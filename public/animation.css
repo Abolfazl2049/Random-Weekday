@@ -3,9 +3,9 @@
 }
 .base-animation {
   animation-iteration-count: 1;
-  animation-duration: 1s;
-  animation-delay: 0s, 1s;
-  animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  animation-duration: 6s, 250ms;
+  animation-delay: 0s, 6s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 .to-side-0 {
@@ -38,40 +38,26 @@
 }
 .back-to-top {
   animation: back-to-top;
+  animation-duration: 850ms !important;
   @apply base-animation;
 }
 
 @keyframes toss {
   /* turning around in air */
-  5% {
-    transform: translateX(40px);
-  }
   10% {
-    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
-  }
-  15% {
-    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
+    transform: translateX(40px);
   }
   20% {
     transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
   }
-  25% {
-    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
-  }
   30% {
-    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
-  }
-  35% {
     transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
   }
   40% {
     transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
   }
-  45% {
-    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
-  }
   50% {
-    transform: translateX(-40px) rotateX(120deg) rotateY(120deg);
+    transform: translateX(40px) rotateX(-120deg) rotateY(-120deg);
   }
   /* falling to the floor */
   55% {
@@ -91,7 +77,13 @@
     transform: translateX(-250px) translateY(400px) rotateX(840deg) rotateY(840deg);
   }
   85% {
-    transform: translateX(-250px) translateY(450px) rotateX(400deg) rotateY(400deg);
+    transform: translateX(-250px) translateY(450px) rotateX(600deg) rotateY(600deg);
+  }
+  90% {
+    transform: translateX(-250px) translateY(450px) rotateX(360deg) rotateY(360deg);
+  }
+  95% {
+    transform: translateX(-250px) translateY(450px) rotateX(120deg) rotateY(120deg);
   }
   100% {
     transform: translateX(-250px) translateY(450px);
@@ -123,6 +115,9 @@
   }
 }
 @keyframes to-side-5 {
+  from {
+    transform: var(--translate) rotateY(-360deg);
+  }
   to {
     transform: var(--translate) rotateY(0deg);
   }
@@ -133,10 +128,11 @@
   }
 }
 @keyframes back-to-top {
-  from {
-    transform: var(--translate) rotateY(180deg);
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: translateY(0deg) rotateY(0deg);
+  80% {
+    opacity: 1;
+    transform: none;
   }
 }

@@ -2,7 +2,6 @@
 let diceEl = ref<HTMLDivElement>();
 let animatedTo = ref();
 let animate = async (side: number) => {
-  console.log(side);
   if (diceEl.value) {
     if (animatedTo.value !== undefined) {
       diceEl.value.classList.remove(`to-side-${animatedTo.value}`);
