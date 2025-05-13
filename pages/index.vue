@@ -8,10 +8,16 @@ let config = ref({
 let rollDice = () => {
   let today = 0;
 
-  if (config.value.removePassedDays) new Date().getDay();
+  if (config.value.removePassedDays) today = new Date().getDay();
   if (config.value.shamsi) today = today === 6 ? 0 : today + 1;
 
-  for (let i = 0; i < diceCount.value; i++) dice.value[i].animate(Math.floor(Math.random() * (6 - today + 1) + today));
+  for (let i = 0; i < diceCount.value; i++) {
+    let randomRes = Math.floor(Math.random() * (6 - today + 1) + today);
+    console.log(randomRes);
+    dice.value[i].animate(randomRes);
+  }
+  console.log('end round');
+  
 };
 </script>
 <template>
